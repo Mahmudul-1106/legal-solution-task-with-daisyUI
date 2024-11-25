@@ -1,18 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legal Solution</title>
 
-    <!-- tailwing and daisyui code -->
+    <!-- tailwind and daisyui code -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Custom color code with tailwind -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'btn-color': '#B68C5A',
+              }
+            }
+          }
+        }
+      </script>
+
+    <!-- Font poppins and EB Garamond-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,800;1,800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .font-garamond {
+            font-family: "EB Garamond", serif;
+            font-optical-sizing: auto;
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+
 </head>
+
 <body>
-    <header></header>
+    <header class="container mx-auto font-poppins">
+        <!-- menu bar container-->
+        <div class="my-12 flex flex-col space-y-5 md:flex-row justify-between items-center">
+            <img src="images/logo2.png" alt="">
+            <!-- menu bar -->
+            <div class="breadcrumbs hidden md:contents">
+                <ul>
+                    <a href="">Home </a>
+                    <li class="pl-7"><a>Services</a></li>
+                    <li><a>Cases</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact Us</a></li>
+                </ul>
+            </div>
+            <button class="btn btn-primary bg-btn-color border-0 text-white">Free Consultation</button>
+        </div>
+        <!-- Legal Solutions min-h-screen-->
+        <div
+        class="hero  min-h-[550px]"
+        style="background-image: url(images/banner.png);">
+        <div class="hero-overlay bg-opacity-0"></div>
+        <div class="hero-content text-neutral-content text-center text-white">
+          <div class="max-w-2xl">
+            <h1 class="mb-5 text-7xl font-extrabold font-garamond ">We Provide Effective Legal Solutions</h1>
+            <p class="mb-5">
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-around">
+                <form action="">
+                    <input class="input  md:min-w-[550px]" placeholder="Search your services" />
+                </form>
+                <button class="btn btn-primary border-0 bg-btn-color">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <main></main>
     <footer></footer>
 </body>
+
 </html>
